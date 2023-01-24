@@ -36,6 +36,8 @@ func main() {
 	// Create the database `todos` manually within postgres
 	db := pg.Connect(&pg.Options{
 		Database: "todos",
+		User:     "dbuser",
+		Password: "dbpass",
 	})
 	defer db.Close()
 
